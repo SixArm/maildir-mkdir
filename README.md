@@ -1,4 +1,4 @@
-# Maildir script to make a Maildir directory and subdirectories.
+# Maildir shell script:<br>make a Maildir directory and subdirectories
 
 Syntax:
 
@@ -30,12 +30,3 @@ To make directories that get automatically copied when a
 typical Linux sysadmin creates a new user on the system:
 
     maildir-mkdirs /etc/skel
-
-## About
-
-  * Program: maildir-mkdirs
-  * Version: 1.1.0
-  * Created: 2010-10-16
-  * Updated: 2015-02-09
-  * License: GPL
-  * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
