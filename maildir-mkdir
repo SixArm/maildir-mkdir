@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# Maildir shell script:
+# make a Maildir directory and subdirectories.
+#
+# Syntax:
+#
+#     maildir-mkdirs [path]
+#
+# This script makes these directories:
+#
+#     Maildir/cur
+#     Maildir/new
+#     Maildir/tmp
+#
+# ## Path details
+#
+# The path default is the current user's home directory.
+#
+# The path must exist.
+#
+# ## Examples
+#
+# To make directories in the current user's home directory:
+#
+#     maildir-mkdir
+#
+# To make directories in a specific directory:
+#
+#     maildir-mkdir /home/alice
+#
+# To make directories that get automatically copied when a
+# typical Linux sysadmin creates a new user on the system:
+#
+#     maildir-mkdir /etc/skel
+#
+# Program: maildir-mkdirs
+# Version: 1.1.0
+# Created: 2010-10-16
+# Updated: 2015-02-09
+# License: GPL
+# Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+##
+set -euf
+path=${1:-$HOME}
+cd "$path"
+mkdir -p Maildir/{cur,new,tmp}
