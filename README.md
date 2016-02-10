@@ -2,7 +2,7 @@
 
 Syntax:
 
-    maildir-mkdirs [path]
+    maildir-mkdir [path]
 
 This script makes these directories:
 
@@ -20,13 +20,13 @@ The path must exist.
 
 To make directories in the current user's home directory:
 
-    maildir-mkdirs
+    maildir-mkdir
 
 To make directories in a specific directory:
 
-    maildir-mkdirs /home/alice
+    maildir-mkdir /home/alice
 
 To make directories that get automatically copied when a
 typical Linux sysadmin creates a new user on the system:
 
-    maildir-mkdirs /etc/skel
+    maildir-mkdir /etc/skel
