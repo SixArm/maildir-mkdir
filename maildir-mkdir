@@ -7,11 +7,28 @@
 #
 #     maildir-mkdirs [path]
 #
-# This script makes these directories:
+# This script makes the required directories:
+#
+#    * `cur` for current mail
+#    * `new` for new mail
+#    * `tmp` for temporary files
+#
+# This script also makes the popular diectories for IMAP and POP:
+#
+#    * `.Drafts` for work in progress mail
+#    * `.Sent` for sent mail
+#    * `.Templates` for mail templates
+#    * `.Trash` for deleted mail
+#
+# The result:
 #
 #     Maildir/cur
 #     Maildir/new
 #     Maildir/tmp
+#     Maildir/.Drafts
+#     Maildir/.Sent 
+#     Maildir/.Templates
+#     Maildir/.Trash
 #
 # ## Path details
 #
@@ -35,13 +52,13 @@
 #     maildir-mkdir /etc/skel
 #
 # Program: maildir-mkdirs
-# Version: 1.1.0
+# Version: 1.2.0
 # Created: 2010-10-16
-# Updated: 2015-02-09
+# Updated: 2017-03-31XS
 # License: GPL
 # Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 ##
 set -euf
 path=${1:-$HOME}
 cd "$path"
-mkdir -p Maildir/{cur,new,tmp}
+mkdir -p Maildir/{cur,new,tmp,.Drafts,.Sent,.Templates,.Trash}
